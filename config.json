@@ -1,0 +1,6 @@
+{
+  "BOT_TOKEN": "NzkwNzQ5NTI0ODc2MTk3OTE4.X-FI4g.pml0O5l-dOINWpRrUVur_zs5E5c",
+  "PREFIX": "!",
+  "CACHE_TIME": 7200000,
+  "LOG_FILENAME": "wsb-discord-bot.log"
+}
