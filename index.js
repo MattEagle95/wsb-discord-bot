@@ -4,6 +4,7 @@ const Discord = require("discord.js");
 const config = require("./config.json");
 const nyse_companies = require('./data/nyse_companies.json');
 const { resolve } = require('bluebird');
+require('dotenv').config()
 
 const logger = winston.createLogger({
   format: winston.format.combine(
@@ -37,7 +38,7 @@ let cacheData = {
 const parser = new Parser()
 const client = new Discord.Client();
 
-client.login(config.BOT_TOKEN);
+client.login(process.env.DISCORD_BOT_TOKEN);
 
 client.on("message", function(message) {
   if (message.author.bot) return;
