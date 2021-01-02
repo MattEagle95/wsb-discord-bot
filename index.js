@@ -55,7 +55,7 @@ client.on("message", function(message) {
     }
 
     cacheData.top.lastUpdate = Date.now()
-    message.reply(`Gathering data...1`);
+    message.reply(`Gathering data...`);
     parseUrl('https://www.reddit.com/r/wallstreetbets/top/')
     .then(feed => {
       promises = []
