@@ -56,7 +56,7 @@ client.on("message", function(message) {
     }
 
     cacheData.top.lastUpdate = Date.now()
-    message.reply(`Gathering data...111111111224444`);
+    message.reply(`Gathering data...`);
     parseUrl('https://www.reddit.com/r/wallstreetbets/top/')
     .then(feed => {
       promises = []
@@ -125,6 +125,9 @@ function searchContent(str) {
 }
 
 function searchSymbol(str, symbol) {
-  if(symbol === 'DD' || symbol === 'A' || symbol === 'YOLO' || symbol === 'ON' || symbol === 'HOLD' || symbol === 'MOON' || symbol === 'GO' || symbol === 'FOR')
-    return (str.match(new RegExp('\\s\\$?' + symbol + '\\s', 'gm')) || []).length
+  if(symbol === 'DD' || symbol === 'A' || symbol === 'YOLO' || symbol === 'ON' || symbol === 'HOLD' || symbol === 'MOON' || symbol === 'GO' || symbol === 'FOR') {
+    return 0
+  }
+
+  return (str.match(new RegExp('\\s\\$?' + symbol + '\\s', 'gm')) || []).length
 }
